@@ -1,0 +1,699 @@
+*
+{
+    padding: 0;
+    margin: 0;
+}
+body
+{
+    background: linear-gradient(45deg, rgba(161, 203, 208, 1.0), rgba(62, 133, 236, 1.0));
+    background-position: fixed;
+}
+.fullScreen::-webkit-scrollbar
+{
+    display: none;
+}
+html
+{
+    scroll-behavior: smooth;
+}
+.fullScreen
+{
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+section
+{
+    height: 100vh;
+    scroll-snap-align: center;
+}
+.nav-link
+{
+    color: white;
+    font-weight: 500;
+    position: relative;
+    text-decoration: inherit;
+}
+#active
+{
+    color: orangered;
+}
+.nav-link::after
+{
+    content: '';
+    background-color: whitesmoke;
+    height: 3px;
+    bottom: 0;
+    width: 0%;
+    left: 0;
+    position: absolute;
+    transition: all ease-in-out .2s;
+}
+.nav-link:hover
+{
+    color: white;
+}
+.nav-link:hover::after
+{
+    width: 100%;
+}
+
+#rowElement
+{
+    height: 80vh;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    /* background-color: violet; */
+}
+#home
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    flex-basis: 85%;
+    color: whitesmoke;
+}
+#iconElement
+{
+    height: 50%;
+    width: 5%;
+    right: 0;
+    /* background-color: whitesmoke; */
+    position: fixed;
+    margin-top: 10%;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+}
+#iconElement button
+{
+    width: 100%;
+    margin-top: 2%;
+    background: transparent;
+    outline: 0;
+    border: none;
+    background-color: #5c9fe1;
+    border-radius: 0.2rem;
+    transition: 0.5s ease-in;
+}
+#iconElement button:hover
+{
+    background-color: whitesmoke;
+}
+.fa-brands,.fa-solid
+{
+    font-size: 1.5rem;
+    padding: 1.5rem;
+    color: whitesmoke;
+}
+.fa-brands:hover,.fa-solid:hover
+{
+    color: #4086EB;
+}
+#aboutComponent
+{
+    height: 100vh;
+    width: 100%;
+    /* background-color: yellowgreen; */
+    position: relative;
+}
+#aboutRow
+{
+    /* background-color: yellow; */
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: relative;
+}
+#aboutFirst
+{
+    margin-top: 7.5%;
+    /* position: absolute; */
+    flex-basis: 55%;
+    /* background-color: black; */
+}
+#aboutSecond
+{
+    flex-basis: 40%;
+    margin-top: 7.5%;
+    border-radius: 5%;
+}
+#aboutSecond img
+{
+    height: 100%;
+    width: 100%;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.aboutText
+{
+    height: 55%;
+    padding: 2rem;
+    letter-spacing: 0.1rem;
+    /* background-color: aqua; */
+}
+.aboutText h2
+{
+    color: azure;
+    font-weight: 100;
+}
+.aboutText h1
+{
+    font-weight: 500;
+    color: whitesmoke;
+}
+.aboutText p
+{
+    font-weight: 500;
+    color: whitesmoke;
+}
+#aboutScroll
+{
+    height: 45%;
+    /* background-color: yellowgreen; */
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+#aboutScroll section
+{
+    height: 80%;
+    width: 30%;
+    background-color: #347C8D;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 0.5rem;
+    transition: 0.2s ease-in;
+    filter: blur(0.5px);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+#aboutScroll section:hover
+{
+    background-color: #ffff;
+}
+.aboutIcon
+{
+    color: white;
+    font-size: 2.5rem;
+    transition: 0.5s ease-out;
+    margin: auto;
+}
+#aboutScroll section:hover .aboutIcon
+{
+    color: black;
+}
+#aboutScroll section p
+{
+    margin: auto;
+    font-weight: 600;
+    color: whitesmoke;
+    margin-top: 0;
+}
+#aboutScroll section:hover p
+{
+    color: black;
+}
+#skillComponent
+{
+    height: 100vh;
+    width: 100%;
+    /* background-color: yellowgreen; */
+    position: relative;
+    display: flex;
+}
+#scrollSkills
+{
+    height: 80vh;
+    width: 100%;
+    background-color: transparent;
+    margin-top: 5%;
+    overflow-y: auto;
+    text-align: center;
+    padding: 0 20rem;
+    display: flex;
+    flex-direction: column;
+}
+#scrollSkills h2
+{
+    color: whitesmoke;
+    font-weight: 200;
+}
+#scrollSkills h1
+{
+    color: whitesmoke;
+    font-weight: 600;
+}
+::-webkit-scrollbar 
+{
+    width: 20px;
+}  
+::-webkit-scrollbar-track 
+{
+    background-color: transparent;
+}  
+::-webkit-scrollbar-thumb 
+{
+    background-color: gray;
+    border-radius: 20px;
+    border: 6px solid transparent;
+    background-clip: content-box;
+}
+  
+.progress 
+{
+    background: rgba(255,255,255,0.1);
+    justify-content: flex-start;
+    border-radius: 5rem;
+    align-items: center;
+    position: relative;
+    padding: 0 0.5rem;
+    display: flex;
+    height: 2.5rem;
+    width: 100%;
+    margin-top: 5%;
+}  
+.progress-value 
+{
+    box-shadow: 0 10px 40px -10px #fff;
+    border-radius: 5rem;
+    background: #fff;
+    height: 1.5rem;
+    width: 0;
+}
+#myWorkcomponent
+{
+    height: 100vh;
+    width: 100%;
+    /* background-color: yellowgreen; */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+#myWorkcomponent h2
+{
+    margin-top: 2%;
+    color: whitesmoke;
+    font-weight: 200;
+}
+#myWorkcomponent h1
+{
+    color: whitesmoke;
+    font-weight: 600;
+}
+#workElements
+{
+    height: 70vh;
+    width: 80%;
+    /* background-color: yellow; */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+#workSectionFirst, #workSectionSecond, #workSectionThird
+{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+#workElements section
+{
+    height: 80%;
+    width: 30%;
+    background-color: yellowgreen;
+    border-radius: 0.5rem;
+    display: block;
+    overflow: hidden;
+}
+#workElements section img
+{
+    height: 100%;
+    width: 100%;
+    border-radius: 0.5rem;
+}
+#workElements section:hover #imgContent
+{
+    top: -100%;
+    background: rgba(240, 234, 234, 0.9);
+}
+#workElements section:hover #imgContent h3
+{
+    display: none;
+}
+#imgContent
+{
+    height: 100%;
+    width: 100%;
+    border-radius: 0.5rem;
+    background-color: grey;
+    position: relative;
+    top: -20%;
+    transition-property: top;
+    transition-duration: 0.5s;
+    background: rgba(134, 136, 134, 0.5);
+    display: flex;
+    flex-direction: column;
+}
+.hiddenHeading
+{
+    height: 20%;
+    width: 100%;
+    /* background-color: yellowgreen; */
+}
+.hiddenHeading h3
+{
+    color: white;
+    font-weight: 600;
+    font-size: 1.3rem;
+    padding: 1.5rem 1rem;
+    display: flex;
+}
+.hiddenContent h2
+{
+    color: black;
+    font-weight: bolder;
+    font-size: 1.3rem;
+    padding: 0.5rem 0rem;
+}
+.hideSection
+{
+    display: none;
+}
+.hiddenContent
+{
+    height: 50%;
+    width: 100%;
+    /* background-color: violet; */
+    padding: 2rem 2rem;
+    text-align: justify;
+}
+#circleSpan
+{
+    display: flex;
+    height: 8vh;
+    width: 10%;
+    /* background-color: violet; */
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+#circleSpan button
+{
+    height: 25%;
+    width: 15%;
+    border-radius: 0.2rem;
+    background-color: whitesmoke;
+    border: none;
+    outline: 0;
+    transition: all 0.2s ease-in;
+}
+.visitBtn
+{
+  height: 2.5rem;
+  width: 50%;
+  background-color: #33BBC5;
+  border: 2px solid #33BBC5;
+  outline: 0;
+  margin-top: 7.5%;
+  margin-left: 25%;
+  background-image: linear-gradient(to bottom, whitesmoke 0%,#fff 100%); 
+  background-size: 400px;
+  background-repeat: no-repeat;
+  background-position: 0%;
+  -webkit-transition: background 300ms ease-in-out;
+  transition: background 300ms ease-in-out;
+}
+.visitBtn:hover
+{
+    background-position: -200%;
+    transition: background 0.8s ease-in-out;
+    color: whitesmoke;
+}
+#contactComponent
+{
+    height: 100vh;
+    width: 100%;
+    /* background-color: yellowgreen; */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+#contactComponent h2
+{
+    margin-top: 2%;
+    color: whitesmoke;
+    font-weight: 200;
+}
+#contactComponent h1
+{
+    color: whitesmoke;
+    font-weight: 600;
+}
+#subContactComponent
+{
+    width: 85%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    position: relative;
+}
+#addressField
+{
+    flex-basis: 45%;
+    /* background-color: yellowgreen; */
+    height: 85%;
+    margin-top: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+#locationElement
+{
+    border-radius: 0.5rem;
+    background: rgba(169, 231, 240, 0.5);
+    display: flex;
+    flex-direction: row;
+    height: 6rem;
+    font-weight: 600;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#locationElement i
+{
+    font-size: 1.5rem;
+    margin: auto;
+    position: relative;
+    margin-left: 10%;
+    color: whitesmoke;
+}
+.iFirst
+{
+    color: white;
+    font-size: 1.2rem;
+    margin: auto;
+    position: relative;
+    margin-left: -10%;
+}
+.iSecond
+{
+    color: white;
+    font-size: 1.2rem;
+    margin: auto;
+    position: relative;
+    margin-left: -45%;
+}
+.iThird
+{
+    color: white;
+    font-size: 1.2rem;
+    margin: auto;
+    position: relative;
+    margin-left: -10%;
+}
+#formField
+{
+    flex-basis: 50%;
+    height: 90%;
+    /* background-color: violet; */
+    margin-top: 2%;
+}
+#formField form
+{
+    height: 100%;
+    width: 100%;
+    /* background-color: yellowgreen; */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.textField
+{
+    height: 3rem;
+    width: 90%;
+    margin: auto;
+    border-radius: 0.5rem;
+    outline: 0;
+    border: 1px solid whitesmoke;
+    background-color: #5aa2dd;
+    padding-left: 5%;
+    color: whitesmoke;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+.textField::placeholder
+{
+    color: whitesmoke;
+    font-weight: 600;
+}
+#message
+{
+    padding-top: 5%;
+}
+.submit
+{
+    height: 4rem;
+    margin-top: 2%;
+    margin: auto;
+    width: 90%;
+    outline: 0;
+    border-radius: 0.5rem;
+    border: 1px solid whitesmoke;
+    font-weight: 700;
+    transition: 0.5s ease-in;
+}
+.submit::placeholder
+{
+    color: black;
+}
+.submit:hover
+{
+    background-color: transparent;
+    border: 2px solid whitesmoke;
+    color: whitesmoke;
+}
+
+
+@keyframes loadHTML
+{
+    0% { width: 0; }
+    100% { width: 85%; }
+}
+@keyframes loadCSS 
+{
+    0% { width: 0; }
+    100% { width: 75%; }
+}
+@keyframes loadJS
+{
+    0% { width: 0; }
+    100% { width: 50%; }
+}
+@keyframes loadSQL
+{
+    0% { width: 0; }
+    100% { width: 70%; }
+}
+@keyframes loadPYTHON
+{
+    0% { width: 0; }
+    100% { width: 65%; }
+}
+@keyframes loadUI
+{
+    0% { width: 0; }
+    100% { width: 45%; }
+}
+
+@media only screen and (max-width:600px)
+{
+    .navbar
+    {
+        background-color: aliceblue;
+        height: 5rem;
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+    }
+    .navbar-toggler
+    {
+        position: absolute;
+        bottom: -3;
+    }
+    .container-fluid
+    {
+        position: fixed;
+        margin-top: 5%;
+        z-index: 1;
+    }
+    .nav-link:hover
+    {
+        color: aqua;
+    }
+    #rowElement
+    {
+        height: 80vh;
+    }
+    #home h1
+    {
+        font-size: 1.8rem;
+        letter-spacing: 0.2px;
+    }
+    #home h2
+    {
+        font-size: 1.3rem;
+    }
+    #home h3
+    {
+        font-size: 1.2rem;
+    }
+    #home h4
+    {
+        font-size: 0.8rem
+    }
+    #iconElement
+    {
+        height: 25%;
+        margin-top: 40%;
+        width: 7.5%;
+    }
+    #aboutComponent
+    {
+        background-color: yellow;
+        margin-top: 20%;
+    }
+    #aboutRow
+    {
+        display: flex;
+        flex-direction: row;
+    }
+    #iconElement button
+    {
+        width: 100%;
+        background: transparent;
+        outline: 0;
+        border: none;
+        background-color: #5c9fe1;
+    }
+    .fa-brands
+    {
+        /* font-size: 1.5rem; */
+        /* padding: 1.5rem; */
+        font-size: 1rem;
+        padding: 0.8rem 0rem;
+    }
+    
+}
+    

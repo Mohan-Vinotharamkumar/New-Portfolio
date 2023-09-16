@@ -1,0 +1,473 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome! Good Day</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="action.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />    <link rel="stylesheet" href="design.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="path/to/aos.css">
+    <script src="path/to/aos.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <style>
+      .hiddenSection
+      {
+        display: none;
+      }
+      #sec1
+      {
+        width: 100%;
+      }
+    </style>
+  </head>
+<body >
+
+  <div class="fullScreen">
+    <nav class="navbar navbar-expand-lg p-3 w-100 fs-6 " aria-label="Offcanvas navbar large" style="position:fixed;z-index:100">
+      <div class="container-fluid" >
+          <!-- //// Toggle Bar Icon.... -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2" >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar2" >
+
+          <!-- ///// Close Button for the nav_bar after toggle on... -->
+          <div class="offcanvas-header">
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" ></button>
+          </div>
+
+          <!-- ///// Elements of the Nav-Bar on the top.... -->
+          <div class="offcanvas-body " >
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item pe-5">
+                <a class="nav-link" aria-current="page" onclick="makeActive()" id="nav" href="#rowElement">Home</a>
+              </li>
+              <li class="nav-item pe-5">
+                <a class="nav-link" onclick="makeActive()" id="nav" href="#aboutRow">About Me</a>
+              </li>
+              <li class="nav-item pe-5">
+                <a class="nav-link" onclick="makeActive()" id="nav" href="#skillComponent">My Skills</a>
+              </li>
+              <li class="nav-item pe-5">
+                <a class="nav-link" onclick="makeActive()" id="nav" href="#myWorkcomponent">My Work</a>
+              </li>
+              <li class="nav-item pe-5">
+                <a class="nav-link" onclick="makeActive()" id="nav" href="#serviceComponent"  data-bs-toggle="modal" data-bs-target="#exampleModal">Resume</a>
+              </li>
+              <li class="nav-item pe-1">
+                <a class="nav-link" onclick="makeActive()" id="nav" href="#contactComponent">Contact Me</a>
+              </li>
+          </div>
+        </div>
+      </div>
+    </nav>
+  
+    
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content"> 
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">
+              HI THERE, THIS IS MOHAN HERE 😎!
+            </h1>
+            
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+
+          <div class="modal-footer">
+            <a href="#" download="./Images/MohanResume.pdf">
+            <button type="button" class="btn btn-primary" download="MohanResume.pdf">DOWNLOAD MY RESUME</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section id="rowElement" class="w-100 h-100" >
+      <div id="home" class="container" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="1000">
+        <h3 >HELLO <span style="color: black;">EVERYONE</span></h3>
+        <h4 >I'<span style="color: black;">M</span></h4>
+        <h1 class="name">MOHANA NAVANEETHA KRISHNAN R</h1>
+        <span>
+          <h2>FRONT-END DEVELOPER <span style="color: black;">|</span> UI/UX</h2>
+        </span>
+      </div>
+      
+      <div id="iconElement" data-aos="zoom-in-up" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="1200">
+        <button data-toggle="tooltip" data-placement="left" title="Whats App">
+          <i class="fa-brands fa-whatsapp"></i>
+        </button>
+        <button onclick="callLocation(id)" id="btnGit" value="https://github.com/Mohan-Vinotharamkumar/" title="Git Hub">
+          <i class="fa-brands fa-github"></i>
+        </button>
+        <button onclick="callLocation(id)" id="btnLinked" value="https://www.linkedin.com/in/mohana-navaneetha-krishnan-r-920198204/" title="LinkedIn">
+          <i class="fa-brands fa-linkedin"></i>
+        </button>
+        <button title="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </button>
+        <button title="Mail">
+          <a href="mailto:navaneethamohan2002@gmail.com?subject=Contact%20Regarding&body=Hello%20Mohan%20,It's%20Happy%20to%20Message%20You!">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+        </button>
+      </div>
+    </section>
+
+    <section id="aboutComponent">
+      <div id="aboutRow" class="container h-100">
+        <div id="aboutFirst" class="h-75">
+          <div class="aboutText" >
+            <h2>ABOUT ME</h2>
+            <h1>WHO AM I ?</h1>
+            <p>
+              I am 22 years old, Completed my Bachelor's Degree from Mepco Schlenk Engineering College.
+              I really enjoy Creating intresting websites as well as making new things...
+            </p>
+          </div>
+          
+          <div id="aboutScroll">
+            <section>
+              <i class="fa-solid fa-user-graduate aboutIcon"></i>
+              <p>BE Graduate <br> 2019 - 2023</p>
+            </section>
+            <section>
+              <i class="fa-solid fa-code aboutIcon"></i>
+              <p>Interested in <br> Coding</p>
+            </section>
+            <section>
+              <i class="fa-solid fa-headphones aboutIcon"></i>
+              <p>Love's Listening <br> Music</p>
+            </section>
+          </div>
+        </div>
+        <div id="aboutSecond" class="h-75" >
+          <img src="./Images/Avatar.jpg" alt="">
+        </div>
+      </div>
+    </section> 
+
+    <section id="skillComponent">
+      <div id="scrollSkills" class="container-fluid">
+        <h2>MY SKILLS</h2>
+        <h1>WHAT I'M GOOD AT?</h1>
+        
+        <section>
+          <div class="progress">
+            <div class="progress-value" style="animation: loadHTML 3s normal forwards;"></div>
+          </div>
+          <span style="float:right;margin-top:2%;color:whitesmoke;font-size:1.4rem;">HTML</span>
+        </section>
+
+        <section>
+          <div class="progress">
+            <div class="progress-value" style="animation: loadCSS 3s normal forwards;"></div>
+          </div>
+          <span style="float:right;margin-top:2%;color:whitesmoke;font-size:1.4rem;">CSS</span>
+        </section>
+
+        <section>
+          <div class="progress">
+            <div class="progress-value" style="animation: loadJS 3s normal forwards;"></div>
+          </div>
+          <span style="float:right;margin-top:2%;color:whitesmoke;font-size:1.4rem;">JAVASCRIPT</span>
+        </section>
+
+        <section>
+          <div class="progress">
+            <div class="progress-value" style="animation: loadSQL 3s normal forwards;"></div>
+          </div>
+          <span style="float:right;margin-top:2%;color:whitesmoke;font-size:1.4rem;">SQL</span>
+        </section>
+      
+        <section>
+          <div class="progress">
+            <div class="progress-value" style="animation: loadPYTHON 3s normal forwards;"></div>
+          </div>
+          <span style="float:right;margin-top:2%;color:whitesmoke;font-size:1.4rem;">PYTHON</span>
+        </section>
+
+        <section>
+          <div class="progress">
+            <div class="progress-value" style="animation: loadUI 3s normal forwards;"></div>
+          </div>
+          <span style="float:right;margin-top:2%;color:whitesmoke;font-size:1.4rem;">UI/UX</span>
+        </section>
+      </div>
+    </section>
+
+    <section id="myWorkcomponent">
+      <h2>MY WORK</h2>
+      <h1>WHAT I'VE DONE?</h1>
+      <div id="workElements" class="container-fluid">
+        
+        <div id="workSectionFirst">
+            <section id="div1">
+              <img src="./Images/gymWebsite.png" alt="">
+              <div id="imgContent">
+                <div class="hiddenHeading">
+                  <h3>GYM WEBSITE</h3>
+                </div>
+                <div class="hiddenContent">
+                  <h2 style="color: black;font-weight:600">GYM WEBSITE</h2>
+                  <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Quos possimus nobis ipsam expedita consequatur suscipit minima.
+                  </P>
+                </div>
+                <button class="visitBtn">View more</button>
+              </div>
+            </section>
+            <section id="div2">
+              <img src="./Images/jewelShop.png" alt="">
+              <div id="imgContent">
+                <div class="hiddenHeading">
+                  <h3>JEWELLERY SHOPPING</h3>
+                </div>
+                <div class="hiddenContent">
+                  <h2 style="color: black;font-weight:600">JEWELLERY SHOPPING</h2>
+                  <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Quos possimus nobis ipsam expedita consequatur suscipit minima.
+                  </P>
+                </div>
+                <button class="visitBtn">View more</button>
+              </div>
+            </section>
+            <section  id="div3">
+              <img src="./Images/collegeWebsite.jpg" alt="">
+              <div id="imgContent">
+                <div class="hiddenHeading">
+                  <h3>COLLEGE WEBSITE</h3>
+                </div>
+                <div class="hiddenContent">
+                  <h2 style="color: black;font-weight:600">COLLEGE WEBSITE</h2>
+                  <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Quos possimus nobis ipsam expedita consequatur suscipit minima.
+                  </P>
+                </div>
+                <button class="visitBtn">View more</button>
+              </div>
+            </section>
+        </div>
+        
+        <div id="workSectionSecond" style="display: none;">
+            <section id="div4">
+              <img src="./Images/hotelManagement.jpg" alt="">
+              <div id="imgContent">
+                <div class="hiddenHeading">
+                  <h3>HOTEL MANAGEMENT</h3>
+                </div>
+                <div class="hiddenContent">
+                  <h2 style="color: black;font-weight:600">HOTEL MANAGEMENT</h2>
+                  <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Quos possimus nobis ipsam expedita consequatur suscipit minima.
+                  </P>
+                </div>
+                <button class="visitBtn">View more</button>
+              </div>
+            </section>
+            <section id="div5">
+              <img src="./Images/toDo.jpg" alt="">
+              <div id="imgContent">
+                <div class="hiddenHeading">
+                  <h3>TO-DO APP</h3>
+                </div>
+                <div class="hiddenContent">
+                  <h2 style="color: black;font-weight:600">TO-DO APP</h2>
+                  <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Quos possimus nobis ipsam expedita consequatur suscipit minima.
+                  </P>
+                </div>
+                <button class="visitBtn">View more</button>
+              </div>
+            </section>
+            <section  id="div6">
+              <img src="./Images/diceRoll.png" alt="">
+              <div id="imgContent">
+                <div class="hiddenHeading">
+                  <h3>DICE ROLL GAME</h3>
+                </div>
+                <div class="hiddenContent">
+                  <h2 style="color: black;font-weight:600">CAPTAIN AMERICA</h2>
+                  <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Quos possimus nobis ipsam expedita consequatur suscipit minima.
+                  </P>
+                </div>
+                <button class="visitBtn">View more</button>
+              </div>
+            </section>
+        </div>
+
+        <div id="workSectionThird" style="display: none;">
+            <section  id="div7">
+              <img src="./Images/drumKitGame.jpg" alt="">
+              <div id="imgContent">
+                <div class="hiddenHeading">
+                  <h3>DRUM KIT PLAYER</h3>
+                </div>
+                <div class="hiddenContent">
+                  <h2 style="color: black;font-weight:600">DRUM KIT PLAYER</h2>
+                  <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Quos possimus nobis ipsam expedita consequatur suscipit minima.
+                  </P>
+                </div>
+                <button class="visitBtn">View more</button>
+              </div>
+            </section>
+            <section   id="div8">
+              <img src="./Images/passwordGenerator.jpg" alt="">
+              <div id="imgContent">
+                <div class="hiddenHeading">
+                  <h3>PASSWORD GENERATOR</h3>
+                </div>
+                <div class="hiddenContent">
+                  <h2 style="color: black;font-weight:600">PASSWORD GENERATOR</h2>
+                  <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Quos possimus nobis ipsam expedita consequatur suscipit minima.
+                  </P>
+                </div>
+                <button class="visitBtn">View more</button>
+              </div>
+            </section>
+            <section  id="div9">
+              <img src="./Images/calculatorReact.jpg" alt="">
+              <div id="imgContent">
+                <div class="hiddenHeading">
+                  <h3>CALCULATOR</h3>
+                </div>
+                <div class="hiddenContent">
+                  <h2 style="color: black;font-weight:600">CALCULATOR</h2>
+                  <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Quos possimus nobis ipsam expedita consequatur suscipit minima.
+                  </P>
+                </div>
+                <button class="visitBtn">View more</button>
+              </div>
+            </section>
+        </div>
+
+      </div>
+
+      <span id="circleSpan" class="container-fluid">
+        <button class="btn1" onclick="callFirst()" id="btnSlider1" style="background-color: pink;"></button>
+        <button class="btn2" onclick="callSecond()" id="btnSlider2"></button>
+        <button class="btn3" onclick="callThird()" id="btnSlider3"></button>
+      </span>
+
+    </section>
+
+
+    <section id="contactComponent" >
+      <h2>CONTACT</h2>
+      <h1>GET IN TOUCH!</h1>
+      
+      <div id="subContactComponent" class="container-fluid h-75">
+        <section id="addressField">
+          <div id="locationElement">
+              <i class="fa-solid fa-location-dot"></i>
+              <p class="iFirst">            
+                ARUPPUKOTTAI, VIRUDHUNAGAR.
+              </p>
+          </div>
+
+          <div id="locationElement">
+            <i class="fa-solid fa-phone"></i>
+            <p class="iSecond">            
+              8870164172
+            </p>
+          </div>
+
+          <div id="locationElement">
+            <i class="fa-solid fa-envelope"></i>
+            <p class="iThird">            
+              navaneethamohan2002@gmail.com 
+            </p>
+          </div>
+        </section>
+        <section id="formField">
+          <form action="" onsubmit="submitResponse();return false;" >
+            <input type="text" name="" id="name" class="textField" placeholder="Name" required>
+            <input type="email" name="" id="email" class="textField" placeholder="Email" required>
+            <textarea name="" id="message" cols="30" rows="5" placeholder="Message" class="textField" style="height: 10rem;" required></textarea>
+            <input type="submit" name="" id="" class="submit" value="SUBMIT">
+          </form>
+        </section>
+      </div>
+
+    </section>
+  </div>
+  
+
+
+  <script>
+    AOS.init();
+  </script>
+
+  <script>
+    const div1 = document.getElementById('div1');
+    const div2 = document.getElementById('div2');
+    const div3 = document.getElementById('div3');
+    const div4 = document.getElementById('div4');
+    const div5 = document.getElementById('div5');
+    const div6 = document.getElementById('div6');
+    const div7 = document.getElementById('div7');
+    const div8 = document.getElementById('div8');
+    const div9 = document.getElementById('div9');
+    const interval = 2000; // 2 seconds
+/*
+    function showDiv1(elementToShow1) {
+      div1.style.display = 'none';
+      div2.style.display = 'none';
+      div3.style.display = 'none';
+      elementToShow1.style.display = 'block';
+    }
+    function showDiv2(elementToShow2) {
+      div1.style.display = 'none';
+      div2.style.display = 'none';
+      div3.style.display = 'none';
+      elementToShow2.style.display = 'block';
+    }
+    function showDiv3(elementToShow3) {
+      div1.style.display = 'none';
+      div2.style.display = 'none';
+      div3.style.display = 'none';
+      elementToShow3.style.display = 'block';
+    }
+
+    showDiv1(div1);
+   /* showDiv2(div2);
+    /*showDiv3(div3); */
+
+    function switchDivs() {
+      if (div1.style.display === 'block') {
+        showDiv1(div2);
+      } else if (div2.style.display === 'block') {
+        showDiv1(div3);
+      } else {
+        showDiv1(div1);
+      }
+    }
+
+    setInterval(switchDivs, interval); 
+  </script>
+  <script>
+    // Smooth scroll when a navigation link is clicked
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+
+        targetElement.scrollIntoView({
+          behavior: 'smooth', // Smooth scrolling behavior
+          block: 'start',     // Scroll to the top of the target element
+        });
+      });
+    });
+  </script>
+</body>
+</html>

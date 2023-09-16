@@ -1,0 +1,58 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
+  <style>
+    .tooltip-text {
+      visibility: hidden;
+      position: absolute;
+      z-index: 2;
+      width: 100px;
+      color: white;
+      font-size: 12px;
+      background-color: #192733;
+      border-radius: 10px;
+      padding: 10px 15px 10px 15px;
+    }
+    .tooltip-text::before {
+      content: "";
+      position: absolute;
+      transform: rotate(45deg);
+      background-color: #192733;
+      padding: 5px;
+      z-index: 1;
+    }
+    .hover-text:hover .tooltip-text {
+      visibility: visible;
+    }
+    #left {
+      top: -8px;
+      right: 120%;
+    }
+    
+    #left::before {
+      top: 35%;
+      left: 94%;
+    }
+
+    .hover-text {
+      position: relative;
+      display: inline-block;
+      margin: 40px;
+      font-family: Arial;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <button class="hover-text" style="margin-left: 35%;">hover me
+    <i class="tooltip-text" id="left">I'm a tooltip!</i>
+  </button>
+
+</body>
+</html>
